@@ -11,6 +11,8 @@
 	- [[ft_isalnum]]
 	- [[ft_isascii]]
 	- [[ft_isprint]]
+	- [[ft_tolower]]
+	- [[ft_toupper]]
 
 [[lcopy_from_sting_lib]]
 	- [[ft_strlen]]
@@ -20,3 +22,14 @@
 	- [[ft_memmove]]
 	- [[ft_strlcpy]]
 	- [[ft_strlcat]]
+	- [[ft_strchr]]
+	- [[ft_strrchr]]
+	- [[ft_strncmp]]
+	- [[ft_memchr]]
+	- [[ft_memcmp]]
+	- [[ft_strnstr]]
+	- [[ft_atoi]]
+
+
+- [[ft_calloc]]
+- [[strdup]]

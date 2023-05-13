@@ -1,0 +1,21 @@
+- Explain my settings 
+	- 10 Month written Sick 
+	- I had a Take to my company last Thursday 
+	- They praisd me, but only specifically with the cooperation with Halle 
+	- My feeling to my about my department are not so good
+	- Before the meeting in thougt the would talk about me how they could fire me. 
+	-  I didn't do justice to the praise
+	- Talking about the school 
+	- 
+
+Question
+- Der Punkt ist das ich kuendigen will und zwar bald 
+	- Ich moechte einen klaren Schnitt haben gerade wenn ich jetzt zur Schule gehe. 
+	- Am Ende moechte ich ja nicht Irgenwie meine Lorbberen kaputt machen. 
+	- Der zuverdienst von 165 Euro ist ja nun sehr gering. 
+		- Kann ich denn mit Mehr Zuverdienst meinen Leistungsanspruch verlaengern 
+	- Kurzum: Ideal waere noch den Kontakt nicht abbrechen zu lassen aber ich moechte mich jetzt auch noch mal weiter entwickelen. Aktuell ist es diese Punkt an dem ich arbeiten moechte. 
+	- Der Konfikt der sich fuer mich auftut ist ich kann mir schon vorstellen einen Tag oder im Monat einen Monat fuer Storck zu Arbeiten aber. Aber ich habe keine Lust das ich Arbeite und am Ende meinen Anspruch weider darueber einbuese dafuer gibt es hier viel zu viele Projekte. 
+	- Auch ist der Punkt so lange Krank kann ich nicht einfach wieder sagen ja ich mache Vollzeit ich habe mich nur unterfordert gefuehlt. 
+	- Ich habe davor viel ueber den Abbruch nach gedacht aber am Ende war es eine Krise ich haette dort nicht laenger beiben koennen 
+	- Ich will aber auch nicht dort zurucke die Angst ist mir zu Gross das ich dort wieder in ein loch falle am Ende will ich noch Ihrgenwie da gut rauskommen nach dem Motto man sieht sich immer 2 mal im Leben. 

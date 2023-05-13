@@ -43,7 +43,7 @@ clean:
 -> Why i need the *.a
 
 
-# Friday
+## Friday
 - I want test the function ft_memset():
 ```c
 void *ft_memset(void *str, int ch, size_t n)
@@ -149,3 +149,38 @@ while (len--)
 	- git is at your local maschine 
 	- github is a cloudservice
 	-
+
+
+## Saturday
+- *strlcpy*
+	- Cut at the End forgotten 
+```c
+if (size < len_src)  //Abbruchbediungen 
+	dest[size - 1] = '\0';
+else if (size != 0)  //Allgemeine Bedingung
+	dest[count] = '\0';
+return (len_src);	
+```
+- strchr ()
+	- Rueckgabe beachten einfach von da wo es los geht! Keine komplizierten konstruckte 
+```c
+mem = (char *)str + count;
+```
+
+- While 
+	- Mache solange etwas nicht erfuelt ist ! 
+
+- ft_memchr 
+	- function declaration return void! so you have to set void for return 
+```c
+void *memchr(const void *str, int c, size_t n)
+```
+
+RETURN 
+```c
+return ((void *)(s + i))
+```
+If is given 'const' -> i have to use 'const' ! 
+```c
+mem = (const char *)str;
+```
