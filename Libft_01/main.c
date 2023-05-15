@@ -100,10 +100,14 @@ int main(void)
   printf("Test: \"%s\"; char: \"%s\"; size: 3 |%d|\n", str1_memcmp, str2_memcmp, ret_memcmp);
   //printf("Test: \"Test Evaluation\"; char: \".\"  |%s|\n", ft_memchr("Test Evaluation", '.', 20));
 
-ft_printseperater("ft_strnstr");
+  ft_printseperater("ft_strnstr");
   const char str1_strnstr[] = "Foo Bar Baz";
-  const char str2_strnstr[] = "Bar";
+  const char str2_strnstr[] = "Baz";
   printf("Test: \"%s\"; char: \"%s\"; size: 11 |%s|\n", str1_strnstr, str2_strnstr, ft_strnstr(str1_strnstr, str2_strnstr, 11));
+
+  ft_printseperater("ft_atoi");
+  const char str_atoi[] = "      \t -42";
+  printf("Test: \"%s\"; int: \"%d\" \n", str_atoi, ft_atoi(str_atoi));
 
 
 }

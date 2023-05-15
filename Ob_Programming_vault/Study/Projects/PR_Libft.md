@@ -28,6 +28,7 @@
 	- [[ft_memchr]]
 	- [[ft_memcmp]]
 	- [[ft_strnstr]]
+[[copy_from_sttlib.h]]
 	- [[ft_atoi]]
 
 
