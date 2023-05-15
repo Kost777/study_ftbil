@@ -33,7 +33,7 @@ char *ft_strnstr(const char *srcstr, const char *search, size_t size_cmp);
 
 int ft_atoi(char const *str);
 void *ft_calloc(size_t num, size_t size);
-
+char *ft_strdup(const char *str);
 // Part 2
 
 

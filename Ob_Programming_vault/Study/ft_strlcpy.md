@@ -3,7 +3,7 @@ In computer programming, the **strlcpy** function is intended to replace the f
 
 # Synopsis
 ```c
-ft_strlcpy(char *dst_, const char *src, size_t size);
+size_t ft_strlcpy (char *dst_, const char *src, size_t size);
 ```
 
 # good To know 

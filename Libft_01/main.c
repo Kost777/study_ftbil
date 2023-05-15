@@ -117,4 +117,9 @@ int main(void)
   int_calloc[2] = 12;
   int_calloc[3] = 13;
   printf("Test 3 Int: 0:\"%d\"; 1:\"%d\"; 2:\"%d\"; 3:\"%d\";\n ", int_calloc[0], int_calloc[1], int_calloc[2], int_calloc[3]);
+  free (int_calloc);
+
+  ft_printseperater("ft_strdup");
+  const char str_strdup[] = "Test Evaluation";
+  printf("Test: \"%s\";  |%s|\n", str_strdup, ft_strdup(str_strdup));
 }
