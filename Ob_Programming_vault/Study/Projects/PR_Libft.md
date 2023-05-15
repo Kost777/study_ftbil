@@ -2,6 +2,8 @@
 [[PR_Libft_Lerning | Lerning]]
 [Testing Software](https://github.com/xicodomingues/francinette)
 [Solved Project git](https://github.com/rchallie/libft)
+[German_Lib_explain](https://www.proggen.org/doku.php?id=c:start)
+
 
 
 ## Part_1
@@ -30,7 +32,5 @@
 	- [[ft_strnstr]]
 [[copy_from_sttlib.h]]
 	- [[ft_atoi]]
-
-
-- [[ft_calloc]]
+	- [[ft_calloc]]
 - [[strdup]]

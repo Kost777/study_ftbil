@@ -212,3 +212,13 @@ if (size_search == count_search && search[count_search] == '\0')
 	return (ret + count_src);
 }
 ```
+
+- ft_atoi --> use your functions --> ex. ft_isdigit()
+```c
+while (str[count] != '\0' && ft_isdigit(str[count]))
+```
+
+- ft_calloc --> use your functions --> ex. ft_bzero() --> for setting all Bytes to 0
+```c
+ft_bzero (ret, num);
+```

@@ -109,5 +109,12 @@ int main(void)
   const char str_atoi[] = "      \t -42";
   printf("Test: \"%s\"; int: \"%d\" \n", str_atoi, ft_atoi(str_atoi));
 
-
+  ft_printseperater("ft_calloc");
+  int *int_calloc;
+  int_calloc = (int *)ft_calloc(3 , sizeof(int));
+  int_calloc[0] = 10;
+  int_calloc[1] = 11;
+  int_calloc[2] = 12;
+  int_calloc[3] = 13;
+  printf("Test 3 Int: 0:\"%d\"; 1:\"%d\"; 2:\"%d\"; 3:\"%d\";\n ", int_calloc[0], int_calloc[1], int_calloc[2], int_calloc[3]);
 }
