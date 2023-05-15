@@ -28,6 +28,8 @@ const char 	*ft_strchr(const char *str, int ch);
 const char 	*ft_strrchr(const char *str, int ch);
 int ft_strncmp(const char *str1, const char *str2, size_t size_cmp);
 void 	*ft_memchr(const void *str, int ch, size_t size_cmp);
+int ft_memcmp(const void *str1, const void *str2, size_t size_cmp);
+char *ft_strnstr(const char *srcstr, const char *search, size_t size_cmp); 
 
 // Part 2
 

@@ -184,3 +184,31 @@ If is given 'const' -> i have to use 'const' !
 ```c
 mem = (const char *)str;
 ```
+
+# KW 20 
+## Monday 
+- strnstr Diese Zeilen  
+```c
+while (ret[count_src + count_search] != '\0' && search[count_src] != '\0' && (count_src + count_search) < size_cmp)
+{
+	if (ret[count_src + count_search] == search[count_search]
+	&& search[count_search] != '\0')
+	{
+		count_search++;
+		if (size_search == count_search && search[count_search] == '\0')
+			return (ret + count_src);
+		}
+	else
+		break;
+}
+```
+Können auch so aussehen --> Einsparung der Codezeilen
+```c
+while (ret[count_src + count_search] != '\0' && search[count_src] != '\0' && (count_src + count_search) < size_cmp
+&& ret[count_src + count_search] == search[count_search])
+{
+count_search++;
+if (size_search == count_search && search[count_search] == '\0')
+	return (ret + count_src);
+}
+```

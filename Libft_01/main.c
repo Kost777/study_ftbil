@@ -93,5 +93,17 @@ int main(void)
   printf("Test: \"Test Evaluation\"; char: \"a\" |%s|\n", ret_memchr);
   //printf("Test: \"Test Evaluation\"; char: \".\"  |%s|\n", ft_memchr("Test Evaluation", '.', 20));
 
+  ft_printseperater("ft_memcmp");
+  const char str1_memcmp[] = "ABCdef";
+  const char str2_memcmp[] = "ABCDEF";
+  int ret_memcmp = ft_memcmp(str1_memcmp, str2_memcmp, 6);
+  printf("Test: \"%s\"; char: \"%s\"; size: 3 |%d|\n", str1_memcmp, str2_memcmp, ret_memcmp);
+  //printf("Test: \"Test Evaluation\"; char: \".\"  |%s|\n", ft_memchr("Test Evaluation", '.', 20));
+
+ft_printseperater("ft_strnstr");
+  const char str1_strnstr[] = "Foo Bar Baz";
+  const char str2_strnstr[] = "Bar";
+  printf("Test: \"%s\"; char: \"%s\"; size: 11 |%s|\n", str1_strnstr, str2_strnstr, ft_strnstr(str1_strnstr, str2_strnstr, 11));
+
 
 }

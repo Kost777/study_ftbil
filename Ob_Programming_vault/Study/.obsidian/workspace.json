@@ -1,0 +1,192 @@
+{
+  "main": {
+    "id": "56a9e87797d1dd2c",
+    "type": "split",
+    "children": [
+      {
+        "id": "5889816e1f483d3d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6d39627185c4c4e3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PR_Libft_Lerning.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e6ff7008e1e7f926",
+    "type": "split",
+    "children": [
+      {
+        "id": "8b524d00849f0637",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "39d144534e1d29fb",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "abb7dc52038702b1",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "f4d738bf554058fb",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "a3a803d07c13569f",
+    "type": "split",
+    "children": [
+      {
+        "id": "668585963c80562e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a8cbc52b780471ce",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "PR_Libft_Lerning.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b6a5b1683321eef5",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "PR_Libft_Lerning.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "2996e31af9e61d23",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "dc9782b33431e0c2",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "PR_Libft_Lerning.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "floating": {
+    "id": "cdf2bf124285b130",
+    "type": "floating",
+    "children": [
+      {
+        "id": "a5476069df754b4c",
+        "type": "window",
+        "children": [
+          {
+            "id": "9480bcbf9a49eda8",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "fabba4c16e8a029e",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "PDF/Libft_subject.pdf"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 1440,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "6d39627185c4c4e3",
+  "lastOpenFiles": [
+    "Projects/PR_Libft.md",
+    "ft_strnstr.md",
+    "ft_strncmp.md",
+    "ft_memcmp.md",
+    "PDF/Libft_subject.pdf"
+  ]
+}
