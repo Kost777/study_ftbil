@@ -3,8 +3,10 @@ the **strlcat** function which provides a similar alternative to strcat (whi
 
 # Synopsis
 ```c
-ft_strlcat(char *dst, const char *src, size_t size);
+size_t ft_strlcat(char *dst_, const char *src, size_t size);
 ```
+
+
 
 # good To know 
 - Useing 

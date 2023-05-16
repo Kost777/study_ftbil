@@ -1,33 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rkost <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/16 21:12:28 by rkost             #+#    #+#             */
-/*   Updated: 2023/05/16 21:19:46 by rkost            ###   ########.fr       */
+/*   Created: 2023/05/16 21:36:31 by rkost             #+#    #+#             */
+/*   Updated: 2023/05/16 21:39:27 by rkost            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *str1, const void *str2, size_t size_cmp)
+size_t	ft_strlcat(char *dest, const char *src, size_t size_dest)
 {
-	size_t		count;
-	const char	*mem_str1;
-	const char	*mem_str2;
+	size_t	count;
+	size_t	len_dest;
+	size_t	len_src;
 
-	mem_str1 = (char *)str1;
-	mem_str2 = (char *)str2;
+	len_dest = ft_strlen(dest);
+	len_src = ft_strlen(src);
 	count = 0;
-	while (mem_str1[count] != '\0' && mem_str2[count] != '\0'
-		&& count < size_cmp)
+	while ((count < size_dest) || src[count] == '\0')
 	{
-		if (mem_str1[count] == mem_str2[count])
-			count++;
-		else if (mem_str1[count] != mem_str2[count])
-			return (((int) mem_str1[count]) - ((int) mem_str2[count]));
+		dest[len_dest + count] = src[count];
+		count++;
 	}
-	return (0);
+	if (size_dest < (len_src + len_dest))
+		dest[size_dest - 1] = '\0';
+	else if (size_dest != 0)
+		dest[len_dest + count] = '\0';
+	return (len_src + len_dest);
 }

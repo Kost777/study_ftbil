@@ -2,7 +2,9 @@
 [[PR_Libft_Lerning | Lerning]]
 [Testing Software](https://github.com/xicodomingues/francinette)
 [Solved Project git](https://github.com/rchallie/libft)
-[[German_Lib_explain]]
+[German_Lib_explain](https://www.proggen.org/doku.php?id=c:start)
+
+
 
 ## Part_1
 [[copy_from_ctype_lib]]
@@ -33,3 +35,20 @@
 [[copy_from_sttlib.h]]
 	- [[ft_atoi]]
 	- [[ft_calloc]]
+
+
+## [[Part 2]] 
+Could be in a the standart libc.c or not but it is a littel bit different. to it 
+- [[ft_substr]]
+- [[ft_strjoin]]
+- [[ft_strtrim]]
+- [[ft_split]]
+- [[ft_itoa]]
+- [[ft_strmapi]]
+- [[ft_striteri]]
+- [[ft_putchar_fd]]
+- [[ft_putstr_fd]]
+- [[ft_putendl_fd]]
+- [[ft_putnbr_fd]]
+
+AQJ230694dght!!!

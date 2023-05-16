@@ -3,6 +3,7 @@ The C library function **void *memcpy(void *dest, const void *src, size_t n)** c
 
 ## Declaration
 
+Following is the declaration for memcpy() function.
 ```c
 void *memcpy(void *dest, const void * src, size_t n)
 ```

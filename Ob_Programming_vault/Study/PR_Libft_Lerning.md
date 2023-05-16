@@ -222,14 +222,3 @@ while (str[count] != '\0' && ft_isdigit(str[count]))
 ```c
 ft_bzero (ret, num);
 ```
-
-- ft_strdup --> Use copy functionen 
-	- It is not so easy to copy -- You have to use Pointer! 
---> WRONG
-```c
-str = ret; // Wrong 
-```
---> RIGHT Use the other function 
-```c 
-rtn = ft_memcpy(rtn, s1, len);
-```

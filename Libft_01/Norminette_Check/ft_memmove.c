@@ -1,26 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rkost <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/16 21:34:19 by rkost             #+#    #+#             */
-/*   Updated: 2023/05/16 21:35:43 by rkost            ###   ########.fr       */
+/*   Created: 2023/05/16 21:04:38 by rkost             #+#    #+#             */
+/*   Updated: 2023/05/16 21:07:17 by rkost            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *str)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char	*ret;
-	size_t	size_str;
+	size_t		count;
+	char		*mem_dest;
+	const char	*mem_src;
 
-	size_str = ft_strlen(str);
-	ret = (char *)malloc((size_str + 1) * sizeof(char));
-	if (!ret)
-		return (0);
-	ret = ft_memcpy(ret, str, size_str);
-	return (ret);
+	mem_dest = (char *)dest;
+	mem_src = (const char *)src;
+	count = 0;
+	if (n <= 0 || dest == src)
+		return (dest);
+	if (mem_src < mem_dest)
+	{
+		while (n--)
+			mem_dest[n] = mem_src[n];
+		return (dest);
+	}
+	while (count < n)
+	{
+		mem_dest[count] = mem_src[count];
+		count++;
+	}
+	return (dest);
 }
