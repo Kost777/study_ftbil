@@ -1,4 +1,5 @@
 #include "libft.h"
+#include <string.h>
 
 void    ft_printseperater(char *arg)
 {
@@ -117,9 +118,69 @@ int main(void)
   int_calloc[2] = 12;
   int_calloc[3] = 13;
   printf("Test 3 Int: 0:\"%d\"; 1:\"%d\"; 2:\"%d\"; 3:\"%d\";\n ", int_calloc[0], int_calloc[1], int_calloc[2], int_calloc[3]);
-  free (int_calloc);
+  free(int_calloc);
 
   ft_printseperater("ft_strdup");
   const char str_strdup[] = "Test Evaluation";
-  printf("Test: \"%s\";  |%s|\n", str_strdup, ft_strdup(str_strdup));
+  char *str_copy_strdup;
+  str_copy_strdup = ft_strdup(str_strdup);
+  printf("Test: \"%s\";  |%s|\n", str_strdup, str_copy_strdup);
+  free(str_copy_strdup);
+
+ft_printseperater("PART_2");
+ft_printseperater("PART_2");
+
+  ft_printseperater("ft_substr");
+  const char str_substr[] = "Save the World";
+  char *str_goal_substr;
+  str_goal_substr = ft_substr(str_substr, 5, 60);
+  printf("Test: \"%s\"; Sart:6; len:3; Result |%s|\n", str_substr, str_goal_substr);
+  free(str_goal_substr);
+
+  ft_printseperater("ft_strjoin");
+  const char s1_strjoin[] = "Save";
+  const char s2_strjoin[] = " the World";
+  char *str_goal_strjoin;
+  str_goal_strjoin = ft_strjoin(s1_strjoin, s2_strjoin);
+  printf("Test: s1:\"%s\"; s2:\"%s\"; Result |%s|\n", s1_strjoin, s2_strjoin, str_goal_strjoin );
+  free(str_goal_strjoin);
+
+  ft_printseperater("ft_strtrim");
+  const char s1_strtrim[] = "Save the Word";
+  const char set_strtrim[] = "e W";
+  char *goal_strtrim;
+  goal_strtrim = ft_strtrim(s1_strtrim,set_strtrim);
+  printf("Test: s1:\"%s\"; set:\"%s\"; Result |%s|\n", s1_strtrim, set_strtrim, goal_strtrim );
+  free(goal_strtrim);
+
+  ft_printseperater("ft_strlcpy");
+  printf("%d", ft_strncmp("test\200", "test\0", 6));
+
+  ft_printseperater("ft_strchr");
+  char s[] = "tripouille";
+  printf("%s -- %s \n", ft_strchr(s, 0), s + strlen(s));
+  printf("%s -- %c -- %s \n", ft_strchr(s, 't' + 256), ('t' + 256), s);
+/*
+  ft_printseperater("ft_split");
+  const char s1_split[] = "Save the Word";
+  char c_split = 'e';
+  char **goal_split;
+  goal_split = ft_split(s1_split,c_split);
+printf("Test: s1:\"%s\"; set:\"%c\"; Result \n", s1_split, c_split);
+char **temp = goal_split;  // Create a temporary pointer to iterate over the array
+
+while (*temp != NULL) {
+    printf("|%s|\n", *temp);
+    temp++;
+}
+
+// Free the memory allocated by ft_split
+temp = goal_split;
+while (*temp != NULL) {
+    free(*temp);
+    temp++;
+}
+free(goal_split);
+  //free(*goal_split);
+*/
 }

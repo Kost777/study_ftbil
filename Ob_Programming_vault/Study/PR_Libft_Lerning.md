@@ -218,7 +218,19 @@ if (size_search == count_search && search[count_search] == '\0')
 while (str[count] != '\0' && ft_isdigit(str[count]))
 ```
 
+
 - ft_calloc --> use your functions --> ex. ft_bzero() --> for setting all Bytes to 0
 ```c
 ft_bzero (ret, num);
+``` 
+## Thusday
+- ERROR - „free(): invalid pointer“ 
+	- Die angezeigte Fehlermeldung „free(): invalid pointer“ tritt normalerweise auf, wenn Sie versuchen, einen Speicherblock freizugeben, der nicht dynamisch zugewiesen wurde oder bereits freigegeben wurde.
+	- You initially allocate memory for `mem` using `strdup`, but then later modify it using `memchr`. This modification changes the original pointer, causing the invalid pointer error when you try to free it.
+```c
+free(mem);
 ```
+
+The issue with freeing `mem` at the end of the `ft_split` function is that you're freeing a pointer that has been modified and is no longer pointing to the dynamically allocated memory.
+
+- Grossen misst habe ich bei strlcpy gebaut --> Anschauen vor 17.05. --> selbst fixen des Problemes 

@@ -1,22 +1,40 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rkost <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/16 21:36:31 by rkost             #+#    #+#             */
+/*   Updated: 2023/05/17 14:16:36 by rkost            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, const char *src, size_t size_dest)
+size_t	ft_strlcat(char *dest, const char *src, size_t destsize)
 {
 	size_t	count;
-    size_t  len_dest;
-    size_t  len_src;
+	size_t	count_dest;
+	size_t	src_len;
+	size_t	dest_len;
 
-    len_dest = ft_strlen(dest);
-    len_src = ft_strlen(src);
-	count = 0;
-	while ((count < size_dest) || src[count] == '\0') 
+	count_dest = 0;
+	dest_len = ft_strlen(dest);
+	src_len = ft_strlen(src);
+	count = dest_len;
+	if (destsize == 0)
+		return (src_len);
+	if (destsize < dest_len)
+		return (src_len + destsize);
+	else
 	{
-    	dest[len_dest + count] = src[count];
-        count++;
-    }
-    if (size_dest < (len_src + len_dest))
-        dest[size_dest - 1] = '\0';
-    else if (size_dest != 0)
-        dest[len_dest + count] = '\0'; 
-    return (len_src + len_dest);
+		while (src[count_dest] && (dest_len + count_dest) < destsize)
+			dest[count++] = src[count_dest++];
+		if ((dest_len + count_dest) == destsize && dest_len < destsize)
+			dest[--count] = '\0';
+		else
+			dest[count] = '\0';
+		return (src_len + dest_len);
+	}
 }

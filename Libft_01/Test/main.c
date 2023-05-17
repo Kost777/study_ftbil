@@ -1,66 +1,103 @@
-#include <stddef.h>
-
+#include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
-#include <bsd/string.h>
-#include <stdio.h> 
 
-int ft_memcmp(const void *str1, const void *str2, size_t size_cmp)
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+char *ft_giveStrPart(const char *s, char c)
 {
-    size_t count;
-    const char *mem_str1;
-    const char *mem_str2;
+    size_t len_to_delimiter = strcspn(s, &c);
+    char *mem = (char *)malloc((len_to_delimiter + 1) * sizeof(char));
+    size_t count = 0;
 
-    mem_str1 = (char *)str1;
-    mem_str2 = (char *)str2;
-    count = 0;
-
-    while (mem_str1[count] != '\0' && mem_str2[count] != '\0' && 
-    count < size_cmp )
+    while (count < len_to_delimiter)
     {
-		printf("\n %lu  %c   %c \n", count, mem_str1[count], mem_str2[count]);
-        if (mem_str1[count] == mem_str2[count])
-            count++;
-        else if (mem_str1[count] != mem_str2[count])
-            return (((int) mem_str1[count]) - ((int) mem_str2[count]));
+        mem[count] = s[count];
+        count++;
     }
-    return (0);
+    mem[count] = '\0';  // Add null-terminating character
+    return mem;
 }
 
+int ft_count_Word(const char *s, char c)
+{
+    int count = 0;
+    int ret = 0;
+    const char *mem = s;
 
-int main() {
+    while (*mem != '\0')
+    {
+        if (*mem == c)
+        {
+            mem++;
+        }
+        else
+        {
+            mem = strchr(mem, c);
+            ret++;
+        }
+    }
+    return (ret + 1);
+}
 
+char **ft_split(const char *s, char c)
+{
+    char **ret;
+    const char *mem;
+    size_t count;
+    size_t count_Arry;
 
-  	const char src_memcpy[50] = "42Berlin";
-   	char dest_memcpy[50] = "EVALUATION!!";
-  	memcpy(dest_memcpy, src_memcpy, 4);
-	printf("Test: \"42Berlin\"; src:\"EVALUATION\" size: 2  |%s| \n", dest_memcpy);
-	printf("\n\n\n");
-	char dest_strlcpy[] = "Test";
-	size_t count;
-	printf("%s \n", dest_strlcpy);
-	count = strlcpy(dest_strlcpy, "MichTesten", 20);
-	printf("\n %s  %zu",  dest_strlcpy, count);
+    mem = s;
+    count = ft_count_Word(mem, c);
+    if (count > 0)
+        ret = (char **)malloc((count + 1) * sizeof(char *));
+    else
+        return NULL;
 
-	printf("\n\n\n");
-	char dest_strlcat[] = "Test";
-	size_t c;
-	printf("%s \n", dest_strlcat);
-	c = strlcat(dest_strlcat, "MichTesten", 20);
-	printf("\n %s  %zu",  dest_strlcat, c);
+    count = 0;
+    count_Arry = 0;
+    while (*mem != '\0')
+    {
+        if (*mem == c)
+        {
+            mem++;
+        }
+        else
+        {
+            ret[count_Arry] = ft_giveStrPart(mem, c);
+            mem = strchr(mem, c);
+            count_Arry++;
+        }
+        count++;
+    }
 
-	printf("\n\n\n");
-    const char *largestring = "Foo Bar Baz";
-    const char *smallstring = "Bar";
-    char *ptr;
+    ret[count_Arry] = NULL;  // Add the final null pointer
+    return ret;
+}
 
-    ptr = strnstr(largestring, smallstring, 12);
-	printf("\n strnstr %s ",  ptr);
+int main()
+{
+    const char s1_split[] = "Save the Word";
+    char c_split = 'e';
+    char **goal_split;
+    goal_split = ft_split(s1_split, c_split);
+    printf("Test: s1:\"%s\"; set:\"%c\"; Result \n", s1_split, c_split);
+    char **temp = goal_split;  // Create a temporary pointer to iterate over the array
 
-	printf("\n\n\n");
-const char str1_memcmp[] = "ABCdef";
-  const char str2_memcmp[] = "ABCDEF";
-  int ret_memcmp = ft_memcmp(str1_memcmp, str2_memcmp, 6);
-  printf("Test: \"%s\"; char: \"%s\"; size: 3 |%d|\n", str1_memcmp, str2_memcmp, ret_memcmp);
+    while (*temp != NULL) {
+        printf("|%s|\n", *temp);
+        temp++;
+    }
 
-	    return 0;
-	}
+    // Free the memory allocated by ft_split
+    temp = goal_split;
+    while (*temp != NULL) {
+        free(*temp);
+        temp++;
+    }
+    free(goal_split);
+
+    return 0;
+}

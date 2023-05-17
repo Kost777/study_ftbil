@@ -22,15 +22,23 @@ SRCS_P1 = ft_isalpha.c \
 	ft_strnstr.c \
 	ft_atoi.c \
 	ft_calloc.c \
-	ft_strdup.c 
-	
+	ft_strdup.c
+
+SRCS_P2 = ft_substr.c \
+	ft_strjoin.c \
+	ft_strtrim.c \
+	ft_split.c
+
+
+SRC = 	$(SRCS_P1) \
+		$(SRCS_P2)
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 ARFLAGS = -rcs
 
 OBJS_DIR = objs/
-OBJS = $(SRCS_P1:%.c=$(OBJS_DIR)%.o)
+OBJS = $(SRC:%.c=$(OBJS_DIR)%.o)
 #OBJECTS_PREFIXED = $(addprefix $(OBJS_DIR), $(OBJS))
 #OBJECTS_PREFIXED = $(patsubst %.o, $(OBJS_DIR)%.o, $(notdir $(OBJS)))
 

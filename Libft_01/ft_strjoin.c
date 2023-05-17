@@ -1,34 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rkost <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/16 21:27:26 by rkost             #+#    #+#             */
-/*   Updated: 2023/05/16 21:28:35 by rkost            ###   ########.fr       */
+/*   Created: 2023/05/16 21:32:27 by rkost             #+#    #+#             */
+/*   Updated: 2023/05/16 21:33:37 by rkost            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-const char	*ft_strchr(const char *str, int ch)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	unsigned int	count;
+	size_t	count;
+	size_t	s1_len;
+	size_t	s2_len;
+	char	*ret;
 
+	s1_len = ft_strlen(s1);
+	s2_len = ft_strlen(s2);
+	if ((!s1 && !s2) || (s1_len == 0 && s2_len == 0))
+		return (0);
+	ret = (char *)malloc((s1_len + s2_len + 1) * sizeof(char));
+	ret = ft_memmove(ret, s1, s1_len);
 	count = 0;
-	//ch = ch % 127;
-	printf("%c -- %d\n\n", ch, ch);
-	while (str[count] != '\0')
+	while (s2[count] != '\0')
 	{
-		printf("%c -- %c \n", str[count], ch);
-		if (str[count] == ch)
-			return(char *)str + count;
+		ret[s1_len + count] = s2[count];
 		count++;
 	}
-	if (ch == '\0')
-		return ((char *)str + count);
-	if (str[count] == ch)
-		return ((char *)str + count);
-	return (0);
+	ret[s1_len + count] = '\0';
+	return (ret);
 }
