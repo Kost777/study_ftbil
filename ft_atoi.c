@@ -11,28 +11,93 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+/*
+static int	get_isspace(const char ch)
+{
+	if ((ch == 32 || ch == '\t' || ch == '\n'
+		|| ch == '\r' || ch == '\v'
+		|| ch == '\f'))
+		return (1);
+	return (0);
+}
+
+static int	get_nb(const char ch)
+{
+	if (ft_isdigit(ch))
+		return (ch - '0');
+	return (-1);
+}
 
 int	ft_atoi(char const *str )
 {
 	unsigned int	ret;
 	unsigned int	count;
+	//unsigned int	limit;
+	int				puffer;
+	int				sign;
+	
+	ret = 0;
+	count = 0;
+	sign = 1;
+	//limit = (unsigned int)(FT_MAX_L / 10);
+	while (get_isspace(str[count]))
+		count++;
+	if  (str[count] == '+' || str[count] == '-')
+		if (str[count++] == '-')
+			sign = -1;
+	while (get_nb(str[count]) != -1 )
+	{	
+		puffer = get_nb(str[count]);
+		if(sign == 1 && ( ret > 2147483647))//limit || (ret == limit && puffer > 7)))
+			return(-1);
+		else if(sign == -1 && ( ret > 2147483648)) //limit || (ret == limit && puffer > 8)))
+			return(0);
+		ret = ret * 10 + puffer;
+	}
+	return (ret * sign);
+}
+*/
+
+static int	get_isspace(const char c)
+{
+	if (c == ' ' || c == '\t' || c == '\n' ||
+			c == '\v' || c == '\f' || c == '\r')
+		return (1);
+	return (0);
+}
+
+static int	get_isnb(const char c)
+{
+	if (c >= '0' && c <= '9')
+		return (c - '0');
+	return (-1);
+}
+
+
+int			ft_atoi(const char *str)
+{
+	int				count;
+	int				puffer;
+	unsigned long	ret;
 	int				sign;
 
 	ret = 0;
 	count = 0;
-	while (str[count] != '\0' && (str[count] == 32
-			|| str[count] == '\t' || str[count] == '\n'
-			|| str[count] == '\r' || str[count] == '\v'
-			|| str[count] == '\f' || str[count] == '+'))
+	sign = 1;
+	while (get_isspace(str[count]))
 		count++;
-	if (str[count] != '\0' && str[count] == '-')
+	if (str[count] == '+' || str[count] == '-')
+		if (str[count++] == '-')
+			sign = -1;
+	while (get_isnb(str[count]) != -1)
 	{
-		sign = 1;
+		puffer = get_isnb(str[count]);
+		if (sign == 1 && (ret > 2147483647))
+			return (-1);
+		else if (sign == -1 && (ret > 2147483648))
+			return (0);
+		ret = ret * 10 + puffer;
 		count++;
 	}
-	while (str[count] != '\0' && ft_isdigit(str[count]))
-		ret = (ret * 10) + (str[count++] - '0');
-	if (sign == 1)
-		return (ret * -1);
-	return (ret);
+	return (ret * sign);
 }
