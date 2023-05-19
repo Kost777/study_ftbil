@@ -5,6 +5,13 @@
 # include <stdio.h>
 # include <stddef.h>
 
+# define FT_MAX_UI      (unsigned int)(~0L)
+# define FT_MAX_I       (int)(FT_MAX_UI >> 1)
+# define FT_MIN_I       (int)(~FT_MAX_I)
+
+# define FT_MAX_UL	(unsigned long)(~0L)
+# define FT_MAX_L	(long)(FT_MAX_UL >> 1)
+# define FT_MIN_L	(long)(~FT_MAX_L)
 
 /* Libc functions */
 // Part 1 

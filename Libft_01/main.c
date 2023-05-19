@@ -1,5 +1,5 @@
 #include "libft.h"
-#include <string.h>
+
 
 void    ft_printseperater(char *arg)
 {
@@ -10,6 +10,8 @@ void    ft_printseperater(char *arg)
 
 int main(void)
 {
+
+  /*
   ft_printseperater("ft_isalpha");
   printf("Test: r |%d| \n", ft_isalpha('r'));
   printf("Test: 7 |%d| \n", ft_isalpha('7'));
@@ -153,13 +155,29 @@ ft_printseperater("PART_2");
   printf("Test: s1:\"%s\"; set:\"%s\"; Result |%s|\n", s1_strtrim, set_strtrim, goal_strtrim );
   free(goal_strtrim);
 
-  
+*/
+
+  ft_printseperater("ft_atoi");
+  const char str_atoi[] = "e + \"++1\"";
+  printf("Test: \"%s\"; int: \"%d\" \n", str_atoi, ft_atoi(("--1")));
+
+
+/*
+  ft_printseperater("ft_strnstr");
+  const char str1_strnstr_2[] = "lorem ipsum dolor sit amet";
+  const char str2_strnstr_2[] = "dol";
+  printf("Test: \"%s\"; char: \"%s\"; size: 16 |%s|\n", str1_strnstr_2, str2_strnstr_2, ft_strnstr(str1_strnstr_2, str2_strnstr_2, 15));
+
+  ft_printseperater("ft_memcmp");
+  const char str1_memcmp_2[] = "t\200";
+  const char str2_memcmp_2[] = "t\0";
+  int ret_memcmp_2 = ft_memcmp(str1_memcmp_2, str2_memcmp_2, 2);
+  printf("Test: \"%s\"; char: \"%s\"; size: 3 |%d|\n", str1_memcmp_2, str2_memcmp_2, ret_memcmp_2);
+
   ft_printseperater("ft_strrchr");
   char str_strrchr[] = "tripouille";
   printf("Teststr1: \"%s\"; search:\"t\" Resoult:\"%s\" ",str_strrchr + strlen(str_strrchr), ft_strrchr(str_strrchr, 0));
 
-
-/*
  ft_printseperater("ft_memchr");
   const char str_memchr_2[] = {0, 1, 2, 3, 4, 5};
   const char *ret_memchr_2 = ft_memchr(str_memchr_2, 0, 1);

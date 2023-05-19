@@ -15,15 +15,15 @@
 int	ft_memcmp(const void *str1, const void *str2, size_t size_cmp)
 {
 	size_t		count;
-	const char	*mem_str1;
-	const char	*mem_str2;
+	const unsigned char	*mem_str1;
+	const unsigned char	*mem_str2;
 
-	mem_str1 = (char *)str1;
-	mem_str2 = (char *)str2;
+	mem_str1 = (unsigned char *)str1;
+	mem_str2 = (unsigned char *)str2;
 	count = 0;
-	while (mem_str1[count] != '\0' && mem_str2[count] != '\0'
-		&& count < size_cmp)
+	while (size_cmp-- > 0)
 	{
+		//printf("%c -- %c -- %zu -- %zu \n ", mem_str1[count], mem_str2[count], count, size_cmp);
 		if (mem_str1[count] == mem_str2[count])
 			count++;
 		else if (mem_str1[count] != mem_str2[count])
