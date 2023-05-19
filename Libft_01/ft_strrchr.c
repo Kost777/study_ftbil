@@ -17,15 +17,17 @@ const char	*ft_strrchr(const char *str, int ch)
 	unsigned int	count;
 	char			*mem;
 
-	count = ft_strlen(str) - 1;
+	count = ft_strlen(str);
+	if (ch == '\0')
+		return (str + count);
 	while (count != 0)
 	{
-		if (str[count] == ch)
+		count--;
+		if (str[count] == (char)ch)
 		{
 			mem = (char *)str + count;
 			return (mem);
 		}
-		count--;
 	}
 	return (0);
 }

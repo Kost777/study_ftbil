@@ -6,7 +6,7 @@
 /*   By: rkost <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 21:08:17 by rkost             #+#    #+#             */
-/*   Updated: 2023/05/16 21:10:26 by rkost            ###   ########.fr       */
+/*   Updated: 2023/05/19 12:24:39 by rkost            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ void	*ft_memchr(const void *str, int ch, size_t size_cmp)
 
 	count = 0;
 	mem = (const char *)str;
-	while (mem[count] != '\0' || count > size_cmp)
+	while (count < size_cmp)
 	{
-		if (mem[count] == ch)
+		if (mem[count] == (char)ch)
 			return ((void *)str + count);
 		count++;
 	}

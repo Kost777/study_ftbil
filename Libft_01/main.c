@@ -153,6 +153,18 @@ ft_printseperater("PART_2");
   printf("Test: s1:\"%s\"; set:\"%s\"; Result |%s|\n", s1_strtrim, set_strtrim, goal_strtrim );
   free(goal_strtrim);
 
+  
+  ft_printseperater("ft_strrchr");
+  char str_strrchr[] = "tripouille";
+  printf("Teststr1: \"%s\"; search:\"t\" Resoult:\"%s\" ",str_strrchr + strlen(str_strrchr), ft_strrchr(str_strrchr, 0));
+
+
+/*
+ ft_printseperater("ft_memchr");
+  const char str_memchr_2[] = {0, 1, 2, 3, 4, 5};
+  const char *ret_memchr_2 = ft_memchr(str_memchr_2, 0, 1);
+  printf("Test: \"%s\"; char: \"0\" |%s|\n",str_memchr_2, ret_memchr_2);
+
   ft_printseperater("ft_strlcpy");
   printf("%d", ft_strncmp("test\200", "test\0", 6));
 
@@ -160,7 +172,7 @@ ft_printseperater("PART_2");
   char s[] = "tripouille";
   printf("%s -- %s \n", ft_strchr(s, 0), s + strlen(s));
   printf("%s -- %c -- %s \n", ft_strchr(s, 't' + 256), ('t' + 256), s);
-/*
+
   ft_printseperater("ft_split");
   const char s1_split[] = "Save the Word";
   char c_split = 'e';
