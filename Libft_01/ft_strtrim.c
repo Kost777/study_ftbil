@@ -12,6 +12,7 @@
 
 #include "libft.h"
 
+
 int	ft_ischar(char ch, char const *set)
 {
 	size_t	count;
@@ -28,23 +29,32 @@ int	ft_ischar(char ch, char const *set)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	count_ret;
+	size_t	count_mem;
 	size_t	count_s1;
 	char	*mem;
-
+	char	*ret;
+	
+	if (s1 == NULL || set == NULL)
+		return (NULL);
 	mem = (char *)malloc((ft_strlen(s1) + 1) * sizeof(char));
-	if (!mem)
-		return (0);
+	if (mem == NULL)
+		return (NULL);
+
 	count_s1 = 0;
-	count_ret = 0;
+	count_mem = 0;
 	while (s1[count_s1] != '\0')
 	{
 		if (!(ft_ischar(s1[count_s1], set)))
 		{
-			mem[count_ret] = s1[count_s1];
-			count_ret++;
+			mem[count_mem] = s1[count_s1];
+			count_mem++;
 		}
 		count_s1++;
 	}
-	return (mem);
+	ret = (char *)malloc((ft_strlen(mem) + 1) * sizeof(char));
+	if (ret == NULL)
+		return NULL;
+	ret = ft_memmove(ret, mem, ft_strlen(mem));
+	free(mem);
+	return (ret);
 }

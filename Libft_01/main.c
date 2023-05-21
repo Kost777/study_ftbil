@@ -12,6 +12,8 @@ int main(void)
 {
 
   /*
+
+
   ft_printseperater("ft_isalpha");
   printf("Test: r |%d| \n", ft_isalpha('r'));
   printf("Test: 7 |%d| \n", ft_isalpha('7'));
@@ -157,12 +159,28 @@ ft_printseperater("PART_2");
 
 */
 
+char *str_strtrim = ft_strtrim("   xxxtripouille", " x");
+printf("%lu -- %s", strlen(str_strtrim),str_strtrim);
+free(str_strtrim);
+
+/*
+
+char	s1_strjoin[] = "tripouille";
+char	s2_strjoin[] = "42";
+char	*strjoin = ft_strjoin(s1_strjoin, s2_strjoin);
+strjoin = ft_strjoin("", "");
+printf ("%s", strjoin);
+
+char *str_test_substr = "lorem ipsum dolor sit amet";
+char *str_substr_2 = ft_substr(str_test_substr, 1, 3);
+printf("|%s| -- |%lu| -- |%s| -- |%lu| \n",str_substr_2,strlen(str_substr_2), str_test_substr, strlen(str_test_substr));
+
+
   ft_printseperater("ft_atoi");
   const char str_atoi[] = "e + \"++1\"";
   printf("Test: \"%s\"; int: \"%d\" \n", str_atoi, ft_atoi(("--1")));
 
 
-/*
   ft_printseperater("ft_strnstr");
   const char str1_strnstr_2[] = "lorem ipsum dolor sit amet";
   const char str2_strnstr_2[] = "dol";

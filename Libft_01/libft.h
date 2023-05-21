@@ -4,6 +4,7 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <stddef.h>
+# include <string.h>
 
 # define FT_MAX_UI      (unsigned int)(~0L)
 # define FT_MAX_I       (int)(FT_MAX_UI >> 1)
