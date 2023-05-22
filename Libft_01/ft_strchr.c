@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-const char	*ft_strchr(const char *str, int ch)
+char	*ft_strchr(const char *str, int ch)
 {
 	unsigned int	count;
 

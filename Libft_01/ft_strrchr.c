@@ -12,14 +12,14 @@
 
 #include "libft.h"
 
-const char	*ft_strrchr(const char *str, int ch)
+char	*ft_strrchr(const char *str, int ch)
 {
 	unsigned int	count;
 	char			*mem;
 
 	count = ft_strlen(str);
 	if (ch == '\0')
-		return (str + count);
+		return ((char *)str + count);
 	while (count != 0)
 	{
 		count--;

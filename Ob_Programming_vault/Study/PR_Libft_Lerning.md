@@ -234,3 +234,37 @@ free(mem);
 The issue with freeing `mem` at the end of the `ft_split` function is that you're freeing a pointer that has been modified and is no longer pointing to the dynamically allocated memory.
 
 - Grossen misst habe ich bei strlcpy gebaut --> Anschauen vor 17.05. --> selbst fixen des Problemes 
+
+# KW21
+## Monday
+
+- Francinette wollte nicht ft_strchr und ft_strrchr compilen 
+- Fehler lag im *const* -> Weglasen -> Definition von Const!
+```c
+const char ft_strchr(...)
+```
+
+- ft_strncmp 
+--> War so weit richtig aber es war wichtig das ich die Variablen einme Memory Übergeben habe ***mem1 = (unsigned char *)str1;***  ansttt alles mit ***str*** zu tun.
+```c
+int ft_strncmp(const char *str1, const char *str2, size_t size_cmp)
+
+{
+	unsigned char *mem1;
+	unsigned char *mem2;
+	size_t count;
+	mem1 = (unsigned char *)str1;
+	mem2 = (unsigned char *)str2;
+	count = 0;
+	while ((mem1[count] != '\0' || mem2[count] != '\0') && count < size_cmp)
+	{
+		if (mem1[count] == mem2[count])
+			count++;
+		else
+		{
+			return ((mem1[count]) - (mem2[count]));
+		}
+	}
+	return (0);
+}
+```

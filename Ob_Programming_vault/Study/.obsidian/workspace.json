@@ -146,43 +146,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "floating": {
-    "id": "cdf2bf124285b130",
-    "type": "floating",
-    "children": [
-      {
-        "id": "a5476069df754b4c",
-        "type": "window",
-        "children": [
-          {
-            "id": "9480bcbf9a49eda8",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "fabba4c16e8a029e",
-                "type": "leaf",
-                "state": {
-                  "type": "pdf",
-                  "state": {
-                    "file": "PDF/Libft_subject.pdf"
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 0,
-        "y": 0,
-        "width": 1280,
-        "height": 1440,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
   "active": "6d39627185c4c4e3",
   "lastOpenFiles": [
+    "ft_strchr.md",
+    "PR_Libft_Lerning.md",
+    "PDF/Libft_subject.pdf",
     "ft_strdup.md",
     "ft_calloc.md",
     "Projects/PR_Libft.md",
@@ -190,8 +158,6 @@
     "ft_strnstr.md",
     "German_Lib_explain.md",
     "ft_atoi.md",
-    "PDF/Libft_subject.pdf",
-    "PR_Libft_Lerning.md",
     "ft_strncmp.md",
     "ft_memcmp.md"
   ]

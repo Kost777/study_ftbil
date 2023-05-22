@@ -14,17 +14,21 @@
 
 int	ft_strncmp(const char *str1, const char *str2, size_t size_cmp)
 {
+	unsigned char *mem1;
+	unsigned char *mem2;
 	size_t	count;
 
+	mem1 = (unsigned char *)str1;
+	mem2 = (unsigned char *)str2;
 	count = 0;
-	while ((str1[count] != '\0' || str2[count] != '\0')
+	while ((mem1[count] != '\0' || mem2[count] != '\0')
 		&& count < size_cmp)
 	{
-		if (str1[count] == str2[count])
+		if (mem1[count] == mem2[count])
 			count++;
 		else
 		{
-			return ((str1[count]) - (str2[count]));
+			return ((mem1[count]) - (mem2[count]));
 		}
 	}
 	return (0);
