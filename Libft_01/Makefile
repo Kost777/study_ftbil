@@ -27,7 +27,8 @@ SRCS_P1 = ft_isalpha.c \
 SRCS_P2 = ft_substr.c \
 	ft_strjoin.c \
 	ft_strtrim.c \
-	ft_split.c
+	ft_split.c \
+	ft_strtrimm.c
 
 
 SRC = 	$(SRCS_P1) \

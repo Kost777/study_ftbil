@@ -268,3 +268,18 @@ int ft_strncmp(const char *str1, const char *str2, size_t size_cmp)
 	return (0);
 }
 ```
+
+- memset --> Compiler fehler da ich noch eine notfall abfrage zur Sicheheit mit intrgriert hatte die musste weg. 
+```c
+if (n <= 0 || (!mem))
+	return (0);
+```
+
+- ft_strdup using ***ft_memcpy*** was wrong becouse it is no '\0' at the end 
+```c
+
+```
+- Calloc Vergessen alle auf '\0' zu setzen -> 'size' bei bzero 
+```c 
+ft_bzero (ret, num * size);
+```

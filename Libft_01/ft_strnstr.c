@@ -12,31 +12,52 @@
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *srcstr, const char *search, size_t size_cmp)
+char	*ftft_strnstr(const char *haystack, const char *needle, size_t size_cmp)
 {
-	size_t	count_src;
-	size_t	count_search;
-	size_t	size_search;
-	char	*ret;
+	size_t	count_hay;
+	size_t	count_needle;
 
-	count_src = 0;
-	ret = (char *)srcstr;
-	size_search = ft_strlen(search);
-	if (size_search == 0 || srcstr == search)
-		return (ret);
-	while (ret[count_src] != '\0' && count_src < size_cmp)
+	if (needle[0] == '\0')
+		return ((char *)haystack);
+	count_hay = 0;
+	while (haystack[count_hay] != '\0' && count_hay < size_cmp)
 	{
-		count_search = 0;
-		while (ret[count_src + count_search] != '\0'
-			&& search[count_src] != '\0'
-			&& (count_src + count_search) < size_cmp
-			&& ret[count_src + count_search] == search[count_search])
+		if (haystack[count_hay] == needle[0])
 		{
-			count_search++;
-			if (size_search == count_search && search[count_search] == '\0')
-				return (ret + count_src);
+			count_needle = 0;
+			while (haystack[count_hay + count_needle] != '\0'
+				&& needle[count_hay] != '\0'
+				&& (count_hay + count_needle) < size_cmp
+				&& haystack[count_hay + count_needle] == needle[count_needle])
+				count_needle++;
+			if (needle[count_needle] == '\0')
+				return ((char *)haystack + count_hay);
 		}
-		count_src++;
+		count_hay++;
+	}
+	return (0);
+}
+
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+{
+	size_t	i;
+	int		j;
+
+	if (*needle == '\0')
+		return ((char*)haystack);
+	i = 0;
+	while (haystack[i] != '\0' && i < len)
+	{
+		if (haystack[i] == needle[0])
+		{
+			j = 0;
+			while (needle[j] && haystack[i + j] && i + j < len
+				&& haystack[i + j] == needle[j])
+				j++;
+			if (needle[j] == '\0')
+				return ((char*)haystack + i);
+		}
+		i++;
 	}
 	return (0);
 }

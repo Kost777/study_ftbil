@@ -12,22 +12,21 @@
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *str, int ch)
+char *ft_strrchr(const char *str, int ch)
 {
-	unsigned int	count;
-	char			*mem;
+	int	count;
 
-	count = ft_strlen(str);
-	if (ch == '\0')
-		return ((char *)str + count);
-	while (count != 0)
+	count = 0;
+	while (str[count])
+		count++;
+	while (count >= 0)
 	{
-		count--;
 		if (str[count] == (char)ch)
-		{
-			mem = (char *)str + count;
-			return (mem);
-		}
+			return ((char*)(str + count));
+		count--;
 	}
-	return (0);
+	return (NULL);
 }
+
+
+

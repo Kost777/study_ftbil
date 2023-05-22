@@ -12,49 +12,56 @@
 
 #include "libft.h"
 
-
-int	ft_ischar(char ch, char const *set)
+static int	ischar(char c, const char *set)
 {
-	size_t	count;
+	size_t	i;
 
-	count = 0;
-	while (set[count] != '\0')
-	{
-		if (set[count] == ch)
+	i = 0;
+	while (*(set + i))
+		if (*(set + i++) == c)
 			return (1);
-		count++;
-	}
 	return (0);
 }
 
-char	*ft_strtrim(char const *s1, char const *set)
+static char	*trimming(const char *s1, const char *set, size_t *k, size_t i)
 {
-	size_t	count_mem;
-	size_t	count_s1;
-	char	*mem;
-	char	*ret;
-	
-	if (s1 == NULL || set == NULL)
-		return (NULL);
-	mem = (char *)malloc((ft_strlen(s1) + 1) * sizeof(char));
-	if (mem == NULL)
-		return (NULL);
+	size_t	j;
+	size_t	len;
+	char	*dst;
 
-	count_s1 = 0;
-	count_mem = 0;
-	while (s1[count_s1] != '\0')
+	len = ft_strlen(s1);
+	j = 0;
+	while (ischar(*(s1 + len - j - 1), set))
+		j++;
+	if ((dst = ft_calloc(sizeof(char), len - (j + i) + 1)) == NULL)
+		return (NULL);
+	while (*k < len - (j + i))
 	{
-		if (!(ft_ischar(s1[count_s1], set)))
-		{
-			mem[count_mem] = s1[count_s1];
-			count_mem++;
-		}
-		count_s1++;
+		*(dst + *k) = *(s1 + i + *k);
+		*k += 1;
 	}
-	ret = (char *)malloc((ft_strlen(mem) + 1) * sizeof(char));
-	if (ret == NULL)
-		return NULL;
-	ret = ft_memmove(ret, mem, ft_strlen(mem));
-	free(mem);
-	return (ret);
+	return (dst);
+}
+
+char		*ft_strtrim(const char *s1, const char *set)
+{
+	size_t	i;
+	size_t	k;
+	size_t	len;
+	char	*dst;
+
+	if (s1 == NULL)
+		return (NULL);
+	i = 0;
+	len = ft_strlen(s1);
+	while (ischar(*(s1 + i), set))
+		i++;
+	k = 0;
+	if (i == len)
+		dst = malloc(1);
+	else
+		dst = trimming(s1, set, &k, i);
+	if (dst != NULL)
+		*(dst + k) = '\0';
+	return (dst);
 }

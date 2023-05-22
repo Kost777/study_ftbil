@@ -4,7 +4,7 @@
 [Solved Project git](https://github.com/rchallie/libft)
 [German_Lib_explain](https://www.proggen.org/doku.php?id=c:start)
 
-
+strtrimm ist falsch wird aber von francinette aktzeptiert daher -- > 
 
 ## Part_1
 [[copy_from_ctype_lib]]

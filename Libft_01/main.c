@@ -159,9 +159,12 @@ ft_printseperater("PART_2");
 
 */
 
-char *str_strtrim = ft_strtrim("   xxxtripouille", " x");
-printf("%lu -- %s", strlen(str_strtrim),str_strtrim);
+char *str_s1 = "DasDasDasDas";
+char *str_strtrim = ft_strtrimm(str_s1, "as");
+printf("%lu -- %s\n", strlen(str_strtrim),str_strtrim);
 free(str_strtrim);
+
+printf("Das ist ein Test\n");
 
 /*
 

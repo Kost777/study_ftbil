@@ -19,11 +19,9 @@ void	*ft_memset(void *str, int ch, size_t n)
 
 	count = 0;
 	mem = (unsigned char *)str;
-	if (n <= 0 || (!mem))
-		return (0);
 	while (count < n)
 	{
-		mem[count] = ch;
+		mem[count] = (unsigned char)ch;
 		count++;
 	}
 	return (mem);
