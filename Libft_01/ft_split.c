@@ -1,95 +1,88 @@
 #include "libft.h"
 
-char *ft_giveStrPart(char *s, char c)
+static int	char_is_separator(char c, char sep)
 {
-    size_t len_to_delimiter;
-    size_t count;
-    char *mem;
+	int	count;
 
-    len_to_delimiter = 0;
-    while (s[len_to_delimiter] != '\0' && s[len_to_delimiter] != c)
-        len_to_delimiter++;
-    mem = (char *)malloc((len_to_delimiter + 1) * sizeof(char));
-    if (mem == NULL)
-        return (NULL);
-    count = 0;
-    while (count < len_to_delimiter)
-    {
-        mem[count] = s[count];
-        count++;
-    }
-    mem[count] = '\0';
-    //*s = ft_memchr(*s, c, ft_strlen(*s));
-   // printf("--> giveStrPart: mem=%s , s;%s <--\n", mem, *s);
-    return (mem);
+	count = 0;
+	if (c == sep || c == '\0')
+		return (1);
+	return (0);
 }
 
-int ft_count_Word(char const *s, char c)
+static int	count_words(char *str, char sep)
 {
-    size_t count;
-    size_t ret;
-    
-    count = 0;
-    ret = 0;
-    while(s[count] != '\0')
-    {
-        if (s[count] == c)
-        {
-            while (s[count++] == c)
-                count++;
-            ret++;
-        }
-        count++;
-    }
-    if (strlen(s) == count && s[count - 1] == c)
-        return (ret);
-    return(ret + 1);
+	int	count;
+	int	words;
+
+	words = 0;
+	count = 0;
+	while (str[count] != '\0')
+	{
+		if (char_is_separator(str[count + 1], sep) == 1
+				&& char_is_separator(str[count], sep) == 0)
+			words++;
+		count++;
+	}
+	return (words);
 }
 
-
-char **ft_split(const char *s, char c)
+static void	write_word(char *dest, char *from, char sep)
 {
-    char **ret;
-    char *mem;
-    size_t count_Arry;
-    size_t count_Part;
-    size_t count;
+	int	count;
 
-    mem = ft_strdup(s);
-    count_Part = ft_count_Word(mem, c);
-    printf("Es gibt %lu Teile \n\n", count_Part);
-    //free(mem);
-    
-    ret = (char **)malloc((count_Part) * sizeof(char *));
-    if (ret == NULL)
-        return (NULL);
+	count = 0;
+	while (char_is_separator(from[count], sep) == 0)
+	{
+		dest[count] = from[count];
+		count++;
+	}
+	dest[count] = '\0';
+}
 
-    count_Arry = 0;
-    count = 0;
-    while (s[count] != '\0')
-    {
-        if (s[count] == c)
-        {   
-            while (s[count++] == c)
-                count++;
-            ret[count_Arry] = ft_giveStrPart(mem + count - 1, c);
-            printf("mem: %s -- count: %lu -- countA: %lu -- Part: %s \n", mem, count_Part, count_Arry, ret[count_Arry]);
-            count_Arry++;
-        }
-        if (count_Arry + 1 == count_Part)
-            break;
-        count++;
-    }
-    if (ret[count_Arry] == NULL)
-    {
-           // printf("-- cA: %lu -- cP: %lu -- %c -- %s -- %s\n",count_Arry, count_Part,mem[strlen(mem) - 1] , ret[count_Arry - 1], mem );
-            if (mem[strlen(mem) - 1] == c)
-                ret[count_Arry] = ft_strtrim(mem + count - 1, &c);
-            else
-                ret[count_Arry] = ft_strdup(mem + count - 1);
-    }
-    //free(mem);
-    count_Arry++;
-    ret[count_Arry] = 0;
-    return (ret);
+static void	*write_split(char **split, char *str, char sep)
+{
+	int		count;
+	int		count_Part;
+	int		word;
+
+	word = 0;
+	count = 0;
+	while (str[count] != '\0')
+		if (char_is_separator(str[count], sep) == 1)
+			count++;
+		else
+		{
+			count_Part = 0;
+			while (char_is_separator(str[count + count_Part], sep) == 0)
+				count_Part++;
+			if ((split[word] = (char*)malloc(sizeof(char) * (count_Part + 1))) == NULL)
+			{
+				while (word > 0)
+					free(split[--word]);
+				return (NULL);
+			}
+			write_word(split[word], str + count, sep);
+			count += count_Part;
+			word++;
+		}
+	return ((void*)1);
+}
+
+char		**ft_split(const char *s, char c)
+{
+	char	**res;
+	char	*str;
+	int		words;
+
+	if (s == NULL)
+		return (NULL);
+	str = (char*)s;
+	words = count_words(str, c);
+	if ((res = (char**)malloc(sizeof(char*) * (words + 1))) == NULL)
+		return (NULL);
+	res[words] = 0;
+	if (write_split(res, str, c) == NULL)
+		return (NULL);
+	return (res);
 }
