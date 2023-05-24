@@ -2,9 +2,6 @@
 
 static int	char_is_separator(char c, char sep)
 {
-	int	count;
-
-	count = 0;
 	if (c == sep || c == '\0')
 		return (1);
 	return (0);

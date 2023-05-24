@@ -23,11 +23,9 @@
             "id": "18618c3bbb9e672e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Study/PR_Libft_Lerning.md",
-                "mode": "source",
-                "source": false
+                "file": "Study/PDF/Libft_subject.pdf"
               }
             }
           },
@@ -122,7 +120,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Study/PR_Libft_Lerning.md",
+                "file": "Study/PDF/Libft_subject.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +137,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Study/PR_Libft_Lerning.md",
+                "file": "Study/PDF/Libft_subject.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +160,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Study/PR_Libft_Lerning.md"
+                "file": "Study/PDF/Libft_subject.pdf"
               }
             }
           }
@@ -183,51 +181,18 @@
       "command-palette:Open command palette": false
     }
   },
-  "floating": {
-    "id": "5f42464657fb8a1a",
-    "type": "floating",
-    "children": [
-      {
-        "id": "ad984b0ba8fe25ef",
-        "type": "window",
-        "children": [
-          {
-            "id": "40fe5af7b80ec096",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "9ce0c564cfaef6d3",
-                "type": "leaf",
-                "state": {
-                  "type": "pdf",
-                  "state": {
-                    "file": "Study/PDF/Libft_subject.pdf"
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 0,
-        "y": 0,
-        "width": 1280,
-        "height": 1440,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
   "active": "18618c3bbb9e672e",
   "lastOpenFiles": [
+    "Study/Projects/PR_Libft.md",
+    "Study/PR_Libft_Lerning.md",
+    "Study/PDF/Brian W. Kernighan, Dennis M. Ritchie - The ANSI C Programming Language (1).pdf",
+    "Study/PDF/PM0323_24-30_Schule42.pdf",
+    "Study/PDF/Libft_subject.pdf",
     "Study/ft_strdup.md",
     "Study/ft_memcpy.md",
     "Study/ft_strlcpy.md",
     "Study/ft_strlcat.md",
-    "Study/PR_Libft_Lerning.md",
-    "Study/Projects/PR_Libft.md",
     "Study/German_Lib_explain.md",
-    "Study/ft_toupper.md",
-    "Study/PDF/Libft_subject.pdf"
+    "Study/ft_toupper.md"
   ]
 }

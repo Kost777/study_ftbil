@@ -159,12 +159,12 @@ ft_printseperater("PART_2");
 
 */
 
-char *str_s1 = "DasDasDasDas";
-char *str_strtrim = ft_strtrimm(str_s1, "as");
-printf("%lu -- %s\n", strlen(str_strtrim),str_strtrim);
-free(str_strtrim);
-
-printf("Das ist ein Test\n");
+  ft_printseperater("ft_itoa");
+  //-2147483648
+  //2147483647
+  int i_itoa = -10;
+  char *ret_itoa = ft_itoa(i_itoa);
+  printf("Test: int: %d; char:|%s|\n",i_itoa, ret_itoa);
 
 /*
 

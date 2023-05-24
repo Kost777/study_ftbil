@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "4ebb0389940143e1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Projects/PR_Libft.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PR_Libft_Lerning.md",
+                "file": "Projects/PR_Libft.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PR_Libft_Lerning.md",
+                "file": "Projects/PR_Libft.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PR_Libft_Lerning.md"
+                "file": "Projects/PR_Libft.md"
               }
             }
           }
@@ -146,7 +159,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "6d39627185c4c4e3",
+  "active": "4ebb0389940143e1",
   "lastOpenFiles": [
     "Projects/PR_Libft.md",
     "ft_strtrim.md",

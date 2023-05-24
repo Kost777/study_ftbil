@@ -28,7 +28,8 @@ SRCS_P2 = ft_substr.c \
 	ft_strjoin.c \
 	ft_strtrim.c \
 	ft_split.c \
-	ft_strtrimm.c
+	ft_strtrimm.c \
+	ft_itoa.c
 
 
 SRC = 	$(SRCS_P1) \
