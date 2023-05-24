@@ -283,3 +283,23 @@ if (n <= 0 || (!mem))
 ```c 
 ft_bzero (ret, num * size);
 ```
+
+## Wensday 
+- itoa 
+	- Anzahl der digit Zaheln lassen 
+	- malloc das ergebniss 
+	- Vorzeichen beachten 
+	- recurion function benutzen einfacher als mein Weg
+--> 
+```c
+static void ft_putnbr_stock(long n, char *str, int *count)
+{
+	if (n > 9)
+	{
+		ft_putnbr_stock(n / 10, str, count);
+		ft_putnbr_stock(n % 10, str, count);
+	}
+	else
+		str[(*count)++] = n + '0';
+}
+```

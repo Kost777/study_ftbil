@@ -23,9 +23,11 @@
             "id": "18618c3bbb9e672e",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Study/PDF/Libft_subject.pdf"
+                "file": "Study/PR_Libft_Lerning.md",
+                "mode": "source",
+                "source": false
               }
             }
           },
@@ -120,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Study/PDF/Libft_subject.pdf",
+                "file": "Study/PR_Libft_Lerning.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -137,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Study/PDF/Libft_subject.pdf",
+                "file": "Study/PR_Libft_Lerning.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -160,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Study/PDF/Libft_subject.pdf"
+                "file": "Study/PR_Libft_Lerning.md"
               }
             }
           }
@@ -185,9 +187,9 @@
   "lastOpenFiles": [
     "Study/Projects/PR_Libft.md",
     "Study/PR_Libft_Lerning.md",
+    "Study/PDF/Libft_subject.pdf",
     "Study/PDF/Brian W. Kernighan, Dennis M. Ritchie - The ANSI C Programming Language (1).pdf",
     "Study/PDF/PM0323_24-30_Schule42.pdf",
-    "Study/PDF/Libft_subject.pdf",
     "Study/ft_strdup.md",
     "Study/ft_memcpy.md",
     "Study/ft_strlcpy.md",
