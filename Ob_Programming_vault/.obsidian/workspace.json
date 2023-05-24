@@ -25,19 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Study/PR_Libft_Lerning.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "3b6d0172f2e927b4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Study/ft_strdup.md",
+                "file": "ft_strmapi.md",
                 "mode": "source",
                 "source": false
               }
@@ -55,8 +43,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -183,18 +170,56 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "18618c3bbb9e672e",
+  "floating": {
+    "id": "4e0ff964a17a047b",
+    "type": "floating",
+    "children": [
+      {
+        "id": "2da9391072099587",
+        "type": "window",
+        "children": [
+          {
+            "id": "28b5f78f3e8cce12",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "3b6d0172f2e927b4",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "Study/PDF/Libft_subject.pdf"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 1440,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "7ae21204ed849635",
   "lastOpenFiles": [
+    "ft_striteri.md",
+    "ft_strmapi.md",
     "Study/Projects/PR_Libft.md",
     "Study/PR_Libft_Lerning.md",
     "Study/PDF/Libft_subject.pdf",
+    "Study/ft_atoi.md",
+    "Study/ft_toupper.md",
+    "Study/ft_strdup.md",
     "Study/PDF/Brian W. Kernighan, Dennis M. Ritchie - The ANSI C Programming Language (1).pdf",
     "Study/PDF/PM0323_24-30_Schule42.pdf",
-    "Study/ft_strdup.md",
     "Study/ft_memcpy.md",
     "Study/ft_strlcpy.md",
     "Study/ft_strlcat.md",
-    "Study/German_Lib_explain.md",
-    "Study/ft_toupper.md"
+    "Study/German_Lib_explain.md"
   ]
 }

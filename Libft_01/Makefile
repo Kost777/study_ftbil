@@ -29,7 +29,9 @@ SRCS_P2 = ft_substr.c \
 	ft_strtrim.c \
 	ft_split.c \
 	ft_strtrimm.c \
-	ft_itoa.c
+	ft_itoa.c	\
+	ft_strmapi.c \
+	ft_striteri.c
 
 
 SRC = 	$(SRCS_P1) \

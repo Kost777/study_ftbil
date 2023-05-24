@@ -303,3 +303,57 @@ static void ft_putnbr_stock(long n, char *str, int *count)
 		str[(*count)++] = n + '0';
 }
 ```
+
+Beim Zählen ist die Negative Betrachtung auch wichtig! 
+```c
+if (n < 0)
+{
+	n *= -1;
+	i++;
+}
+```
+
+- Strmapi Function to Function 
+Example 
+```c
+#include <stdio.h>
+int add(int a, int b)
+{
+	return a + b;
+}
+
+int mul(int a, int b)
+{
+	return a * b;
+}
+
+int main()
+	{
+	int(*fp)(int, int);
+	
+	fp = add;
+	printf("%d\n", fp(10, 20)); //30
+	fp = mul;
+	printf("%d\n", fp(10, 20)); //200
+}
+```
+
+Verinfache die malloc nicht erst bilden und dann abfragen? 
+
+```c
+if (!(ret = (char *)malloc((ft_strlen(s) + 1) * sizeof(char))))
+	return (NULL);
+```
+
+Ich hattte einen Fehler da ich statt Count eine Zahl eingestzt hatte. 
+```c 
+ret[count] = f(count, s[count]); // Richtig 
+ret[count] = f(1, s[count]); // Falsch
+```
+
+- Beim Test von ft_striteri -> Fehler : Speicherzugriffsfehler (Speicherauszug erstellt)
+	- Bei ft_strmapi war das kein Problem! 
+```c
+*str_striteri = "Das ist ein Test"; // Falsch
+str_striteri[] = "Das ist ein Test"; // Richtig
+ ```

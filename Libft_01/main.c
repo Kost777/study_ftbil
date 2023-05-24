@@ -8,6 +8,17 @@ void    ft_printseperater(char *arg)
     printf("\n---------------------------------------\n");
 }
 
+char ft_test_strmapi(unsigned int i, char ch)
+{
+  char ret = (int)ch + i;
+  return (ret);
+}
+
+void ft_test_striteri(unsigned int i, char *ch)
+{
+  *ch = *ch + i;
+}
+
 int main(void)
 {
 
@@ -157,14 +168,33 @@ ft_printseperater("PART_2");
   printf("Test: s1:\"%s\"; set:\"%s\"; Result |%s|\n", s1_strtrim, set_strtrim, goal_strtrim );
   free(goal_strtrim);
 
-*/
+ //spilt is missing 
 
-  ft_printseperater("ft_itoa");
+ ft_printseperater("ft_itoa");
   //-2147483648
   //2147483647
   int i_itoa = -10;
   char *ret_itoa = ft_itoa(i_itoa);
   printf("Test: int: %d; char:|%s|\n",i_itoa, ret_itoa);
+
+
+*/
+
+ft_printseperater("ft_strmapi");
+char str_strmapi[] = "Das ist ein Test";
+char *ret_strmapi = ft_strmapi(str_strmapi, *ft_test_strmapi);
+printf("Test: Orginal: %s; Result: %s", str_strmapi, ret_strmapi);
+free(ret_strmapi);
+
+ft_printseperater("ft_striteri");
+char str_striteri[] = "Das ist ein Test";
+ft_striteri(str_striteri, ft_test_striteri);
+printf("Test: Orginal: %s; Result: %s\n", "Das ist ein Test",str_striteri);
+
+
+
+
+ 
 
 /*
 
@@ -234,4 +264,6 @@ while (*temp != NULL) {
 free(goal_split);
   //free(*goal_split);
 */
+
+return (0);
 }
