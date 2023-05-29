@@ -1,34 +1,44 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rkost <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/29 17:53:59 by rkost             #+#    #+#             */
+/*   Updated: 2023/05/29 17:54:07 by rkost            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-
-void    ft_printseperater(char *arg)
+void  ft_printseperater(char *arg)
 {
     printf("\n---------------------------------------\n");
     printf("Test:\t %s", arg);
     printf("\n---------------------------------------\n");
 }
 
-void    ft_printseperater_part(char *arg)
+void  ft_printseperater_part(char *arg)
 {
     printf("\n\n------------------------------------------------------------------------\n");
     printf("%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s", arg, arg, arg, arg, arg, arg, arg, arg);
     printf("\n------------------------------------------------------------------------\n");
 }
 
-char ft_test_strmapi(unsigned int i, char ch)
+char  ft_test_strmapi(unsigned int i, char ch)
 {
   char ret = (int)ch + i;
   return (ret);
 }
 
-void ft_test_striteri(unsigned int i, char *ch)
+void  ft_test_striteri(unsigned int i, char *ch)
 {
   *ch = *ch + i;
 }
 
 int main(void)
 {
-
 ft_printseperater_part("PART 1");
 //ft_isalpha
 /*
@@ -170,6 +180,7 @@ ft_printseperater_part("PART 1");
 */
 //ft_strrchr
 /*
+
   ft_printseperater("ft_strrchr");
   char str_strrchr[] = "Test Evaluation";
   char ch_strrchr_Test1 = 'a';
@@ -244,7 +255,6 @@ ft_printseperater_part("PART 1");
   printf("Test: \"%s\"; Result: |%s|\n", str_strdup, str_copy_strdup);
   free(str_copy_strdup);
 */
-
 ft_printseperater_part("PART 2");
 //ft_substr
 /*
@@ -384,6 +394,7 @@ ft_printseperater_part("PART 2");
   close(file_putendl_fd); 
 */
 //ft_putnbr_fd
+/*
   ft_printseperater("ft_putnbr_fd");
   int file_putnbr_fd;
   char filepath_putnbr_fd[] = "Test/datei_putnbr.txt";
@@ -400,4 +411,5 @@ ft_printseperater_part("PART 2");
   ft_putnbr_fd(int_putnbr_fd, file_putnbr_fd);
 
   close(file_putnbr_fd); 
+*/
 }

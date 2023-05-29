@@ -33,7 +33,8 @@ static char	*trimming(const char *s1, const char *set, size_t *k, size_t i)
 	j = 0;
 	while (ischar(*(s1 + len - j - 1), set))
 		j++;
-	if ((dst = ft_calloc(sizeof(char), len - (j + i) + 1)) == NULL)
+	dst = ft_calloc(sizeof(char), len - (j + i) + 1);
+	if (dst == NULL)
 		return (NULL);
 	while (*k < len - (j + i))
 	{
@@ -43,7 +44,7 @@ static char	*trimming(const char *s1, const char *set, size_t *k, size_t i)
 	return (dst);
 }
 
-char		*ft_strtrim(const char *s1, const char *set)
+char	*ft_strtrim(const char *s1, const char *set)
 {
 	size_t	i;
 	size_t	k;

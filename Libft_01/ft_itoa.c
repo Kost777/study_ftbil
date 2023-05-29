@@ -1,11 +1,22 @@
-# include "libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rkost <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/29 17:35:26 by rkost             #+#    #+#             */
+/*   Updated: 2023/05/29 17:37:39 by rkost            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 static int	ft_nbrlen(long n)
 {
 	int		i;
 
 	i = 1;
-	
 	if (n < 0)
 	{
 		n *= -1;
@@ -30,14 +41,15 @@ static void	ft_putnbr_stock(long n, char *str, int *i)
 		str[(*i)++] = n + '0';
 }
 
-char		*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char	*str;
 	int		i;
 	long	nbr;
 
 	nbr = n;
-	if ((str = malloc(sizeof(char) * (ft_nbrlen(nbr) + 1))) == NULL)
+	str = malloc(sizeof(char) * (ft_nbrlen(nbr) + 1));
+	if (str == NULL)
 		return (NULL);
 	i = 0;
 	if (nbr < 0)

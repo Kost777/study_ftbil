@@ -6,7 +6,7 @@
 /*   By: rkost <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 21:12:28 by rkost             #+#    #+#             */
-/*   Updated: 2023/05/16 21:19:46 by rkost            ###   ########.fr       */
+/*   Updated: 2023/05/29 17:01:49 by rkost            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_memcmp(const void *str1, const void *str2, size_t size_cmp)
 {
-	size_t		count;
+	size_t				count;
 	const unsigned char	*mem_str1;
 	const unsigned char	*mem_str2;
 
@@ -23,7 +23,6 @@ int	ft_memcmp(const void *str1, const void *str2, size_t size_cmp)
 	count = 0;
 	while (size_cmp-- > 0)
 	{
-		//printf("%c -- %c -- %zu -- %zu \n ", mem_str1[count], mem_str2[count], count, size_cmp);
 		if (mem_str1[count] == mem_str2[count])
 			count++;
 		else if (mem_str1[count] != mem_str2[count])
