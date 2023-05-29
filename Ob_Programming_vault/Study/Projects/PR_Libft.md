@@ -4,6 +4,7 @@
 [Solved Project git](https://github.com/rchallie/libft)
 [German_Lib_explain](https://www.proggen.org/doku.php?id=c:start)
 
+## Fackten fuer die Evalution
 strtrimm ist falsch wird aber von francinette aktzeptiert daher -- > 
 
 ## Part_1
@@ -37,7 +38,7 @@ strtrimm ist falsch wird aber von francinette aktzeptiert daher -- >
 	- [[ft_calloc]]
 
 
-## [[Part 2]] 
+## Part 2 
 Could be in a the standart libc.c or not but it is a littel bit different. to it 
 - [[ft_substr]]
 - [[ft_strjoin]]
@@ -51,4 +52,13 @@ Could be in a the standart libc.c or not but it is a littel bit different. to it
 - [[ft_putendl_fd]]
 - [[ft_putnbr_fd]]
 
-AQJ230694dght!!!
+## Bonus
+- [[ft_lastnew]]
+- [[ft_lstadd_front]]
+- [[ft_lastsize]]
+- [[ft_lstlast]]
+- [[ft_last_back]]
+- [[ft_lstdelone]]
+- [[ft_lstclear]]
+- [[ft_lstiter]]
+- [[ft_lstmap]]
