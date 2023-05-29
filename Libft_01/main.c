@@ -314,4 +314,90 @@ ft_printseperater_part("PART 2");
   printf("Test: Orginal: %s; Result: %s\n", str_striteri_orginal, str_striteri);
   free(str_striteri_orginal);
 */
+//ft_putchar_fd
+/*
+  ft_printseperater("ft_putchar_fd");
+  int file_putchar_fd;
+  char filepath_putchar_fd[] = "Test/datei_putchar.txt";
+  char ch_putchar_fd = 'T';
+  if(access(filepath_putchar_fd, F_OK) != -1)
+  {
+    file_putchar_fd = open(filepath_putchar_fd, O_WRONLY | O_APPEND ); // Datei öffnen oder erstellen
+  }
+  else 
+  {
+    file_putchar_fd = open(filepath_putchar_fd, O_WRONLY | O_CREAT | O_APPEND, 0644); // Datei öffnen oder erstellen
+  }
+  if (file_putchar_fd == -1) 
+  {
+    perror("Fehler beim Öffnen der Datei");
+    return 1;
+  }
+  ft_putchar_fd(ch_putchar_fd, file_putchar_fd);
+
+  close(file_putchar_fd);
+*/
+//ft_putstr_fd
+/*
+  ft_printseperater("ft_putstr_fd");
+  int file_putstr_fd;
+  char filepath_putstr_fd[] = "Test/datei_putstr.txt";
+  char *ch_putstr_fd = "Das ist ein String";
+  if(access(filepath_putstr_fd, F_OK) != -1)
+  {
+    file_putstr_fd = open(filepath_putstr_fd, O_WRONLY | O_APPEND ); // Datei öffnen oder erstellen
+  }
+  else 
+  {
+    file_putstr_fd = open(filepath_putstr_fd, O_WRONLY | O_CREAT | O_APPEND, 0644); // Datei öffnen oder erstellen
+  }
+  if (file_putstr_fd == -1) 
+  {
+    perror("Fehler beim Öffnen der Datei");
+    return 1;
+  }
+  ft_putstr_fd(ch_putstr_fd, file_putstr_fd);
+
+  close(file_putstr_fd);
+*/
+//ft_putendl_fd
+/*
+  ft_printseperater("ft_putendl_fd");
+  int file_putendl_fd;
+  char filepath_putendl_fd[] = "Test/datei_putendl.txt";
+  char *ch_putendl_fd = "Das ist ein String";
+  if(access(filepath_putendl_fd, F_OK) != -1)
+  {
+    file_putendl_fd = open(filepath_putendl_fd, O_WRONLY | O_APPEND ); // Datei öffnen oder erstellen
+  }
+  else 
+  {
+    file_putendl_fd = open(filepath_putendl_fd, O_WRONLY | O_CREAT | O_APPEND, 0644); // Datei öffnen oder erstellen
+  }
+  if (file_putendl_fd == -1) 
+  {
+    perror("Fehler beim Öffnen der Datei");
+    return 1;
+  }
+  ft_putendl_fd(ch_putendl_fd, file_putendl_fd);
+
+  close(file_putendl_fd); 
+*/
+//ft_putnbr_fd
+  ft_printseperater("ft_putnbr_fd");
+  int file_putnbr_fd;
+  char filepath_putnbr_fd[] = "Test/datei_putnbr.txt";
+  int int_putnbr_fd = 21111;
+  if(access(filepath_putnbr_fd, F_OK) != -1)
+    file_putnbr_fd = open(filepath_putnbr_fd, O_WRONLY | O_APPEND ); 
+  else 
+    file_putnbr_fd = open(filepath_putnbr_fd, O_WRONLY | O_CREAT | O_APPEND, 0644);
+  if (file_putnbr_fd == -1) 
+  {
+    perror("Fehler beim Öffnen der Datei");
+    return 1;
+  }
+  ft_putnbr_fd(int_putnbr_fd, file_putnbr_fd);
+
+  close(file_putnbr_fd); 
 }

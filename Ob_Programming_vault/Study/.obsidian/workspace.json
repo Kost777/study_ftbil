@@ -13,26 +13,25 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PR_Libft_Lerning.md",
+                "file": "Projects/PR_Libft.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "4ebb0389940143e1",
+            "id": "214128c75ba13824",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Projects/PR_Libft.md",
+                "file": "ft_strtrim.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -159,20 +158,58 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4ebb0389940143e1",
+  "floating": {
+    "id": "09ed15c11f2bade5",
+    "type": "floating",
+    "children": [
+      {
+        "id": "d60264f6db443588",
+        "type": "window",
+        "children": [
+          {
+            "id": "618c59f256db6544",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "6f1734a415332b59",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "PDF/Libft_subject.pdf"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 335,
+        "y": 0,
+        "width": 936,
+        "height": 1400,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "6d39627185c4c4e3",
   "lastOpenFiles": [
-    "Projects/PR_Libft.md",
-    "ft_strtrim.md",
-    "PR_Libft_Lerning.md",
-    "ft_memset.md",
-    "ft_strchr.md",
+    "ft_atoi.md",
     "PDF/Libft_subject.pdf",
+    "ft_memcpy.md",
+    "ft_putstr_fd.md",
+    "Projects/PR_Libft.md",
+    "ft_putchar_fd.md",
+    "ft_strtrim.md",
+    "ft_memset.md",
+    "PR_Libft_Lerning.md",
+    "ft_strchr.md",
     "ft_strdup.md",
     "ft_calloc.md",
     "ft_bzero.md",
     "ft_strnstr.md",
     "German_Lib_explain.md",
-    "ft_atoi.md",
     "ft_strncmp.md",
     "ft_memcmp.md"
   ]
