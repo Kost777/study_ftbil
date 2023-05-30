@@ -357,3 +357,145 @@ ret[count] = f(1, s[count]); // Falsch
 *str_striteri = "Das ist ein Test"; // Falsch
 str_striteri[] = "Das ist ein Test"; // Richtig
  ```
+
+
+# KW 22
+## Thusday 
+- Rechericher genau nach warum es nicht ging mit dem fd file 
+- Struct Ohne Pointer 
+```c
+#include <stdio.h>
+// Declare a struct called "Person"
+struct Person {
+    char name[50];
+    int age;
+    float height;
+};
+int main() {
+    // Declare a variable of type "Person"
+    struct Person person1;
+
+    // Assign values to the struct members
+    strcpy(person1.name, "John");
+    person1.age = 25;
+    person1.height = 1.75;
+    // Access and print the struct members
+    printf("Name: %s\n", person1.name);
+    printf("Age: %d\n", person1.age);
+    printf("Height: %.2f\n", person1.height);
+    return 0;
+}
+```
+- Struckt mit Pointer 
+```c 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+// Declare a struct called "Person"
+struct Person {
+    char name[50];
+    int age;
+    float height;
+};
+
+int main() {
+    // Declare a pointer to struct "Person"
+    struct Person* personPtr;
+    // Allocate memory for the struct using malloc
+    personPtr = (struct Person*)malloc(sizeof(struct Person));
+    // Assign values to the struct members using arrow operator
+    strcpy(personPtr->name, "John");
+    personPtr->age = 25;
+    personPtr->height = 1.75;
+    // Access and print the struct members using arrow operator
+    printf("Name: %s\n", personPtr->name);
+    printf("Age: %d\n", personPtr->age);
+    printf("Height: %.2f\n", personPtr->height);
+    // Free the dynamically allocated memory
+    free(personPtr);
+    return 0;
+}
+
+```
+
+- ft_lstadd_front () Richtig Anweden 
+```c
+while (count_lstadd_front != 0)
+{
+new_lstadd_front = ft_lstnew(content_ft_lstadd_front);
+ft_lstadd_front(&lst_lstadd_front, new_lstadd_front);
+count_lstadd_front--;
+}
+```
+
+FALSCH 
+
+```c
+new_lstadd_front = ft_lstnew(content_ft_lstadd_front);
+while (count_lstadd_front != 0)
+{
+ft_lstadd_front(&lst_lstadd_front, new_lstadd_front);
+count_lstadd_front--;
+}
+```
+ERLAERUNG, 
+
+In deinem ursprünglichen Code hattest du folgende Zeile innerhalb der Schleife:
+
+cCopy code
+
+`ft_lstadd_front(&lst_lstadd_front, new_lstadd_front);`
+
+Hier ist `new_lstadd_front` ein Zeiger auf denselben Knoten, der außerhalb der Schleife erstellt wurde. Die Funktion `ft_lstadd_front` fügt diesen Knoten am Anfang der Liste `lst_lstadd_front` hinzu. Jedoch übergibst du in jeder Iteration der Schleife denselben Zeiger `new_lstadd_front` an `ft_lstadd_front`.
+
+Innerhalb der Funktion `ft_lstadd_front` hast du die Zeile:
+
+cCopy code
+
+`new->next = *lst;`
+
+Diese Zeile setzt den `next`-Zeiger des `new`-Knotens auf den aktuellen Kopf der Liste. In der ersten Iteration, wenn die Liste leer ist (`lst_lstadd_front` ist `NULL`), wird `new->next` korrekt zu `NULL`. Jedoch wird in den folgenden Iterationen `new->next` auf dieselbe Adresse wie `new_lstadd_front` gesetzt, was der vorherige Knoten ist, der zur Liste hinzugefügt wurde.
+
+Als Ergebnis zeigt jeder Knoten in der Liste auf denselben `new_lstadd_front`-Knoten, was eine zirkuläre Referenz erzeugt. Diese zirkuläre Referenz führt zu einer Endlosschleife beim Durchlaufen der Liste, da die `next`-Zeiger weiterhin auf denselben Knoten zeigen anstatt mit `NULL` zu enden.
+
+Um dieses Problem zu lösen, musst du innerhalb jeder Schleifeniteration einen neuen Knoten mit `ft_lstnew` erstellen. Dadurch wird sichergestellt, dass jeder Knoten eine eindeutige Speicheradresse hat und das Problem der zirkulären Referenz vermieden wird.
+
+
+--- 
+Function lstlast -> meine Funktion funktioniert nicht
+```c
+t_list *ft_lstlast(t_list *lst) 
+{ 
+void *content; 
+t_list *ret; 
+
+ret = NULL; 
+if (!lst) 
+	return(0); 
+while (lst->next != NULL) 
+{ 
+	content = lst->content; 
+	lst = lst->next; 
+} 
+content = lst->content; 
+ret->content = content; 
+return (ret); }
+```
+
+---> Antwort ChatGPT -> Bedenke die Strukt ist ein Verschachtetlte Objekt mit mit jewile eine Struckt so kann ich das Strukt um Ende auslesen 
+```c
+#include "libft.h"
+t_list *ft_lstlast(t_list *lst)
+{
+    t_list *ret;
+    if (!lst)
+        return NULL;
+    ret = lst;
+    while (ret->next != NULL)
+    {
+        ret = ret->next;
+    }
+    return ret;
+}
+```

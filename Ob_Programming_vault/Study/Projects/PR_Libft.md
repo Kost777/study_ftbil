@@ -57,7 +57,7 @@ Could be in a the standart libc.c or not but it is a littel bit different. to it
 - [[ft_lstadd_front]]
 - [[ft_lastsize]]
 - [[ft_lstlast]]
-- [[ft_last_back]]
+- [[ft_lstadd_back]]
 - [[ft_lstdelone]]
 - [[ft_lstclear]]
 - [[ft_lstiter]]
