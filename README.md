@@ -1,4 +1,6 @@
-# study_ftbil
+# LIBFT
+## Task
+- [subject](doc/Libft_subject.pdf)
 
 ## function Part 1
 - [ft_isalpha](doc/ft_isalpha.md)
