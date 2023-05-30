@@ -41,11 +41,11 @@
 - [ft_putnbr_fd](doc/ft_putnbr_fd.md)
 
 ## function bonus
-- [ft_lstnew](doc/ft_lastnew.md)
+- [ft_lstnew](doc/ft_lstnew.md)
 - [ft_lstadd_front](doc/ft_lstadd_front.md)
-- [ft_lstsize](doc/ft_lastsize.md)
+- [ft_lstsize](doc/ft_lstsize.md)
 - [ft_lstlast](doc/ft_lstlast.md)
-- [ft_lstadd_back](doc/ft_last_back.md)
+- [ft_lstadd_back](doc/ft_lstadd_back.md)
 - [ft_lstdelone](doc/ft_lstdelone.md)
 - [ft_lstclear](doc/ft_lstclear.md)
 - [ft_lstiter](doc/ft_lstiter.md)
